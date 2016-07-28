@@ -1,0 +1,45 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebProyecto.MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Proyecto</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+</head>
+<body id="top">
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="PageInicio.aspx">Aeropuerto</a></h1>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li class="active"><a href="PageInicio.aspx">Inicio</a></li>
+        <li><a href="PageAerolineas.aspx">Aerolineas</a></li>
+        <li><a href="PageItinerarios.aspx">Itinerarios</a></li>
+        <li><a href="PageTicketes.aspx">Ticketes</a></li>
+        <li><a href="PageHistorial.aspx">Historial de Ordenes</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Jose Carrillo Mendez / Jose Rojas Guerrero </p>
+    <p class="fl_right">Proyecto 02: Base de Datos I</p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

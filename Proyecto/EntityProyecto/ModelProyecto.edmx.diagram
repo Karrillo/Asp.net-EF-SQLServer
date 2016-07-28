@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f2efd20aed14976a019b27804bb1b65" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoModel.Aerolineas" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Aeropuertos" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.AsientosDeItinerarios" Width="1.5" PointX="9.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.AsientosDeVuelos" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Itinerarios" Width="1.5" PointX="7.5" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Maletas" Width="1.5" PointX="12" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.OrdenesDeCompras" Width="1.5" PointX="7.5" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Pasajeros" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.PuertasDeAbordajes" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.Vuelos" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoModel.VAerolineas" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <AssociationConnector Association="ProyectoModel.FK__Vuelos__IDAeroli__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__PuertasDe__IDAer__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__AsientosD__IDIti__300424B4" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__AsientosD__IDOrd__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__AsientosD__IDPas__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__Maletas__IDAsien__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__AsientosD__IDVue__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__Itinerari__IDVue__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="ProyectoModel.FK__Vuelos__IDPuerta__1ED998B2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

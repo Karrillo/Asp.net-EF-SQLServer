@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProyectoModelStoreContainer" CdmEntityContainer="ProyectoEntities">
+    <EntitySetMapping Name="Aerolineas">
+      <EntityTypeMapping TypeName="ProyectoModel.Aerolineas">
+        <MappingFragment StoreEntitySet="Aerolineas">
+          <ScalarProperty Name="IDAerolinea" ColumnName="IDAerolinea" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Aeropuertos">
+      <EntityTypeMapping TypeName="ProyectoModel.Aeropuertos">
+        <MappingFragment StoreEntitySet="Aeropuertos">
+          <ScalarProperty Name="IDAeropuerto" ColumnName="IDAeropuerto" />
+          <ScalarProperty Name="Cuidad" ColumnName="Cuidad" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsientosDeItinerarios">
+      <EntityTypeMapping TypeName="ProyectoModel.AsientosDeItinerarios">
+        <MappingFragment StoreEntitySet="AsientosDeItinerarios">
+          <ScalarProperty Name="IDAsientoDeItinerario" ColumnName="IDAsientoDeItinerario" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="TipoDeAsiento" ColumnName="TipoDeAsiento" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Fila" ColumnName="Fila" />
+          <ScalarProperty Name="MaximodeMaletasGratis" ColumnName="MaximodeMaletasGratis" />
+          <ScalarProperty Name="IDOrdenDeCompra" ColumnName="IDOrdenDeCompra" />
+          <ScalarProperty Name="IDItinerario" ColumnName="IDItinerario" />
+          <ScalarProperty Name="IDPasajero" ColumnName="IDPasajero" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AsientosDeVuelos">
+      <EntityTypeMapping TypeName="ProyectoModel.AsientosDeVuelos">
+        <MappingFragment StoreEntitySet="AsientosDeVuelos">
+          <ScalarProperty Name="IDAsientoDeVuelo" ColumnName="IDAsientoDeVuelo" />
+          <ScalarProperty Name="TipoDeAsiento" ColumnName="TipoDeAsiento" />
+          <ScalarProperty Name="Fila" ColumnName="Fila" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="IDVuelo" ColumnName="IDVuelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Itinerarios">
+      <EntityTypeMapping TypeName="ProyectoModel.Itinerarios">
+        <MappingFragment StoreEntitySet="Itinerarios">
+          <ScalarProperty Name="IDItinerario" ColumnName="IDItinerario" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="HoraRealDeSalida" ColumnName="HoraRealDeSalida" />
+          <ScalarProperty Name="HoraRealDeLlegada" ColumnName="HoraRealDeLlegada" />
+          <ScalarProperty Name="IDVuelo" ColumnName="IDVuelo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Maletas">
+      <EntityTypeMapping TypeName="ProyectoModel.Maletas">
+        <MappingFragment StoreEntitySet="Maletas">
+          <ScalarProperty Name="IDMaleta" ColumnName="IDMaleta" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="CodigoAsignado" ColumnName="CodigoAsignado" />
+          <ScalarProperty Name="Fragil" ColumnName="Fragil" />
+          <ScalarProperty Name="Extra" ColumnName="Extra" />
+          <ScalarProperty Name="IDAsientoDeItinerario" ColumnName="IDAsientoDeItinerario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrdenesDeCompras">
+      <EntityTypeMapping TypeName="ProyectoModel.OrdenesDeCompras">
+        <MappingFragment StoreEntitySet="OrdenesDeCompras">
+          <ScalarProperty Name="IDOrdenDeCompra" ColumnName="IDOrdenDeCompra" />
+          <ScalarProperty Name="FechaPago" ColumnName="FechaPago" />
+          <ScalarProperty Name="NumeroTarjeta" ColumnName="NumeroTarjeta" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pasajeros">
+      <EntityTypeMapping TypeName="ProyectoModel.Pasajeros">
+        <MappingFragment StoreEntitySet="Pasajeros">
+          <ScalarProperty Name="IDPasajero" ColumnName="IDPasajero" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="NumeroPasaporte" ColumnName="NumeroPasaporte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PuertasDeAbordajes">
+      <EntityTypeMapping TypeName="ProyectoModel.PuertasDeAbordajes">
+        <MappingFragment StoreEntitySet="PuertasDeAbordajes">
+          <ScalarProperty Name="IDPuertaDeAbordaje" ColumnName="IDPuertaDeAbordaje" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="EstadoActual" ColumnName="EstadoActual" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+          <ScalarProperty Name="NumeroDePuerta" ColumnName="NumeroDePuerta" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IDAeropuerto" ColumnName="IDAeropuerto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vuelos">
+      <EntityTypeMapping TypeName="ProyectoModel.Vuelos">
+        <MappingFragment StoreEntitySet="Vuelos">
+          <ScalarProperty Name="IDVuelo" ColumnName="IDVuelo" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="TipoDeAvion" ColumnName="TipoDeAvion" />
+          <ScalarProperty Name="HoraDeSalida" ColumnName="HoraDeSalida" />
+          <ScalarProperty Name="HoraDeLlegada" ColumnName="HoraDeLlegada" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="IDAerolinea" ColumnName="IDAerolinea" />
+          <ScalarProperty Name="IDPuertaDeAbordaje" ColumnName="IDPuertaDeAbordaje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VAerolineas">
+      <EntityTypeMapping TypeName="ProyectoModel.VAerolineas">
+        <MappingFragment StoreEntitySet="VAerolineas">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
