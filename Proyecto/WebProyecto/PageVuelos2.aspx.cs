@@ -13,5 +13,15 @@ namespace WebProyecto
         {
 
         }
+
+        protected void btn_ingresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_cancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

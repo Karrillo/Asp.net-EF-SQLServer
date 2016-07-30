@@ -73,6 +73,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\Estilos.css" />
     <Content Include="PageAerolineas.aspx" />
     <Content Include="PageAerolineas2.aspx" />
     <Content Include="PageAeropuertos.aspx" />
@@ -80,7 +81,7 @@
     <Content Include="PageHistorial.aspx" />
     <Content Include="PageInicio.aspx" />
     <Content Include="PageItinerarios.aspx" />
-    <Content Include="PageItinerarios2.aspx.aspx" />
+    <Content Include="PageItinerarios2.aspx" />
     <Content Include="PagePuertas.aspx" />
     <Content Include="PagePuertas2.aspx" />
     <Content Include="PageTicketes.aspx" />
@@ -146,12 +147,12 @@
     <Compile Include="PageItinerarios.aspx.designer.cs">
       <DependentUpon>PageItinerarios.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PageItinerarios2.aspx.aspx.cs">
-      <DependentUpon>PageItinerarios2.aspx.aspx</DependentUpon>
+    <Compile Include="PageItinerarios2.aspx.cs">
+      <DependentUpon>PageItinerarios2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PageItinerarios2.aspx.aspx.designer.cs">
-      <DependentUpon>PageItinerarios2.aspx.aspx</DependentUpon>
+    <Compile Include="PageItinerarios2.aspx.designer.cs">
+      <DependentUpon>PageItinerarios2.aspx</DependentUpon>
     </Compile>
     <Compile Include="PagePuertas.aspx.cs">
       <DependentUpon>PagePuertas.aspx</DependentUpon>
@@ -206,6 +207,7 @@
       <Name>EntityProyecto</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

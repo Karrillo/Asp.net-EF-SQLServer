@@ -11,17 +11,19 @@
             <tr>
                 <td style="width: 235px">Codigo</td>
                 <td>
-                    <asp:TextBox ID="txt_codigo" runat="server" MaxLength="50" Width="184px"></asp:TextBox>
+                    <asp:TextBox ID="txt_codigo" runat="server" MaxLength="50" Width="184px" CssClass="twitterStyleTextbox"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_codigo" ErrorMessage="Ingrese un codigo" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td style="width: 235px">Nombre</td>
                 <td>
-                    <asp:TextBox ID="txt_nombre" runat="server" MaxLength="50" Width="184px"></asp:TextBox>
+                    <asp:TextBox ID="txt_nombre" runat="server" MaxLength="50" Width="184px" CssClass="twitterStyleTextbox"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_nombre" ErrorMessage="Ingrese un nombre" ForeColor="Red"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
-                <td style="width: 235px; height: 36px;">Descripcion</td>
+                <td style="width: 235px; height: 36px;" class="twitterStyleTextbox">Descripcion</td>
                 <td style="height: 36px">
                     <asp:TextBox ID="txt_descrip" runat="server" MaxLength="100" Width="384px" Height="48px" TextMode="MultiLine"></asp:TextBox>
                 </td>
@@ -32,12 +34,8 @@
                     <br />
                 </td>
                 <td>
-                    <div style="margin-left: auto; margin-right: auto;" id="topnav">
-                        <ul>
-                            <li class="last"><a id="guardar" runat="server" href="#">Guardar</a></li>
-                            <li class="last"><a href="PageAerolineas.aspx">Cancelar</a></li>
-                        </ul>
-                    </div>
+                    <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar" CssClass="Button" OnClick="btn_ingresar_Click"/>
+                    <asp:Button ID="btn_cancelar" runat="server" Text="Cancelar" CssClass="Button" OnClick="btn_cancelar_Click" />
                 </td>
             </tr>
         </table>

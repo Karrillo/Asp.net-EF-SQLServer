@@ -1,0 +1,41 @@
+﻿body {margin:0; padding:0; font-size:13px; font-family:verdana, Arial, Helvetica, sans-serif; color:#333333; background-color:#FFFFFF;
+}
+
+.Button {
+background:#999999;
+color:#fff;
+font-size:20px;
+font-family:Arial;
+padding:6px 30px;
+border-bottom: 3px solid #95AD19;
+border:none;
+border-radius:5px;
+}
+
+    .Button:hover {
+        background:#95AD19;
+        border-bottom:3px solid #95AD19;
+    }
+
+
+    input.twitterStyleTextbox {
+    border: 1px solid #c4c4c4;
+    width: 180px;
+    height: 18px;
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+
+input.twitterStyleTextbox:focus {
+    outline: none;
+    border: 1px solid #95AD19;
+    box-shadow: 0px 0px 8px #95AD19;
+    -moz-box-shadow: 0px 0px 8px #95AD19;
+    -webkit-box-shadow: 0px 0px 8px #95AD19;
+}

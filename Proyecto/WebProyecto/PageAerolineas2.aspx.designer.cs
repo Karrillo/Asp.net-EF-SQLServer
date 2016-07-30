@@ -31,6 +31,15 @@ namespace WebProyecto {
         protected global::System.Web.UI.WebControls.TextBox txt_codigo;
         
         /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// txt_nombre control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace WebProyecto {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_nombre;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// txt_descrip control.
@@ -58,12 +76,21 @@ namespace WebProyecto {
         protected global::System.Web.UI.WebControls.Label lb_mensaje;
         
         /// <summary>
-        /// guardar control.
+        /// btn_ingresar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor guardar;
+        protected global::System.Web.UI.WebControls.Button btn_ingresar;
+        
+        /// <summary>
+        /// btn_cancelar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_cancelar;
     }
 }

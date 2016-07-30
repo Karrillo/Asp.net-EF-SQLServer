@@ -5,6 +5,7 @@
 <head>
 <title>Proyecto</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="Css/Estilos.css" rel="stylesheet" />
 <link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
 <script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
@@ -15,12 +16,12 @@
 <div class="wrapper col1">
   <div id="header">
     <div id="logo">
-      <h1><a href="PageInicio.aspx">Aeropuerto</a></h1>
+        <h1><a href="PageInicio.aspx">Aeropuerto</a></h1>
     </div>
     <div id="topnav">
       <ul>
-        <li class="active"><a href="PageInicio.aspx">Inicio</a></li>
         <li><a href="PageAerolineas.aspx">Aerolineas</a></li>
+        <li><a href="PageAeropuertos.aspx">Aeropuerto</a></li>
         <li><a href="PageItinerarios.aspx">Itinerarios</a></li>
         <li><a href="PageTicketes.aspx">Ticketes</a></li>
         <li><a href="PageHistorial.aspx">Historial de Ordenes</a></li>
