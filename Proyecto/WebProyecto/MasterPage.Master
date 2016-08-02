@@ -1,23 +1,23 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebProyecto.MasterPage" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Proyecto</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link href="Css/Estilos.css" rel="stylesheet" />
-<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
-<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
-<script type="text/javascript" src="layout/scripts/jquery.jcarousel.pack.js"></script>
-<script type="text/javascript" src="layout/scripts/jquery.jcarousel.setup.js"></script>
+<head runat="server">
+    <title>Proyecto</title>
+    <%--importaciones--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link href="Css/Estilos.css" rel="stylesheet" />
+    <link href="Css/layout.css" rel="stylesheet" />
+    <link href="Css/jquery.datetimepicker.css" rel="stylesheet" />
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/jquery.datetimepicker.full.min.js"></script>
 </head>
-<body id="top">
-<!-- ####################################################################################################### -->
-<div class="wrapper col1">
+<body>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper col1">
   <div id="header">
-    <div id="logo">
-        <h1><a href="PageInicio.aspx">Aeropuerto</a></h1>
-    </div>
+    <div id="logo"><h1><a href="PageInicio.aspx">Aeropuerto</a></h1></div>
     <div id="topnav">
       <ul>
         <li><a href="PageAerolineas.aspx">Aerolineas</a></li>
@@ -30,17 +30,17 @@
     <br class="clear" />
   </div>
 </div>
-<!-- ####################################################################################################### -->
-<div class="wrapper col3">
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper col5">
-  <div id="copyright">
-    <p class="fl_left">Jose Carrillo Mendez / Jose Rojas Guerrero </p>
-    <p class="fl_right">Proyecto 02: Base de Datos I</p>
-    <br class="clear" />
-  </div>
-</div>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper col3">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <!-- ####################################################################################################### -->
+    <div class="wrapper col5">
+        <div id="copyright">
+            <p class="fl_left">Jose Carrillo Mendez / Jose Rojas Guerrero </p>
+            <p class="fl_right">Proyecto 02: Base de Datos I</p>
+            <br class="clear" />
+        </div>
+    </div>
 </body>
 </html>

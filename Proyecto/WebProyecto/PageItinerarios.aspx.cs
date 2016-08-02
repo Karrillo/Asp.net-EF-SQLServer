@@ -12,14 +12,24 @@ namespace WebProyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
+        /// <summary>
+        /// boton para ingresar nueva informacion 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
             Session["Data"] = 0;
             Response.Redirect("PageItinerarios2.aspx");
         }
+
+        /// <summary>
+        /// linkbuton para editar informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void lbEditar_Click(object sender, EventArgs e)
         {
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;
@@ -27,6 +37,11 @@ namespace WebProyecto
             Response.Redirect("PageItinerarios2.aspx");
         }
 
+        /// <summary>
+        /// linkbuton para desahabilitar itinerario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void lbEliminar_Click(object sender, EventArgs e)
         {
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;
@@ -45,6 +60,5 @@ namespace WebProyecto
                 GridView1.DataBind();
             }
         }
-
     }
 }

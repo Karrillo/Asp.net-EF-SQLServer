@@ -16,12 +16,21 @@ namespace WebProyecto
 
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
-
         }
 
+        /// <summary>
+        /// redireccion a la pagina anterior
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_cancelar_Click(object sender, EventArgs e)
         {
+            Response.Redirect("PageAerolineas.aspx");
+        }
 
+        protected void ddl_pais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

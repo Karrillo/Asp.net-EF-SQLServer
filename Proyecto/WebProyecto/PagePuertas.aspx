@@ -4,7 +4,7 @@
     <form id="form1" runat="server">
         <table style="width: 100%; border: 1px solid #cccccc">
             <tr>
-                <td>
+                <td><%--gridview--%>
                     <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AutoGenerateColumns="False" DataKeyNames="IDPuertaDeAbordaje,IDAeropuerto" DataSourceID="SqlDataSourcePuertas">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
@@ -32,16 +32,16 @@
                         <SortedAscendingHeaderStyle BackColor="#848384" />
                         <SortedDescendingCellStyle BackColor="#EAEAD3" />
                         <SortedDescendingHeaderStyle BackColor="#575357" />
-                    </asp:GridView>
+                    </asp:GridView><%--sqldatasource--%>
                     <asp:SqlDataSource ID="SqlDataSourcePuertas" runat="server" ConnectionString="<%$ ConnectionStrings:PROYECTOConnectionString %>" SelectCommand="SELECT PuertasDeAbordajes.IDPuertaDeAbordaje, PuertasDeAbordajes.Codigo, PuertasDeAbordajes.Terminal, PuertasDeAbordajes.NumeroDePuerta, Aeropuertos.IDAeropuerto FROM Aeropuertos INNER JOIN PuertasDeAbordajes ON Aeropuertos.IDAeropuerto = PuertasDeAbordajes.IDAeropuerto where PuertasDeAbordajes.estado=1 and Aeropuertos.IDAeropuerto = @IDAero">
-                         <SelectParameters>
-                            <asp:SessionParameter Name="IDAero" SessionField="Data"/>
+                        <SelectParameters>
+                            <asp:SessionParameter Name="IDAero" SessionField="Data" />
                         </SelectParameters>
                     </asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td><%--boton--%>
                     <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar" CssClass="Button" OnClick="btn_ingresar_Click" />
                 </td>
             </tr>

@@ -4,7 +4,7 @@
     <form id="form1" runat="server">
         <table style="width: 100%; border: 1px solid #cccccc">
             <tr>
-                <td>
+                <td><%--Gridview--%>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="IDItinerario" DataSourceID="SqlDataSourceItinerario" ForeColor="Black" GridLines="Vertical">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
@@ -31,12 +31,12 @@
                         <SortedAscendingHeaderStyle BackColor="#848384" />
                         <SortedDescendingCellStyle BackColor="#EAEAD3" />
                         <SortedDescendingHeaderStyle BackColor="#575357" />
-                    </asp:GridView>
+                    </asp:GridView><%--sqlDataSouce--%>
                     <asp:SqlDataSource ID="SqlDataSourceItinerario" runat="server" ConnectionString="<%$ ConnectionStrings:PROYECTOConnectionString %>" SelectCommand="SELECT [IDItinerario], [HoraRealDeSalida], [HoraRealDeLlegada] FROM [Itinerarios] WHERE [Estado]=1 "></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td><%--boton--%>
                     <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar" CssClass="Button" OnClick="btn_ingresar_Click" />
                 </td>
             </tr>

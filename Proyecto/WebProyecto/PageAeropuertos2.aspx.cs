@@ -12,8 +12,14 @@ namespace WebProyecto
     {
         private Int32 id;
 
+        /// <summary>
+        /// resive un int para verificar si es un editar o nuevo ingreso de informacion 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            //id de aerolinea ha editar
             id = Convert.ToInt32(Session["Data"]);
 
             //verifica si es editar o ingreso nuevo
@@ -45,7 +51,7 @@ namespace WebProyecto
         }
 
         /// <summary>
-        /// actualiza datos
+        /// actualiza informacion
         /// </summary>
         private void actualizarDatos()
         {
@@ -113,32 +119,30 @@ namespace WebProyecto
         }
 
         /// <summary>
-        /// limpia los componentes
+        /// boton el cual redirecciona a la pagina anterior
         /// </summary>
-        private void limpiar()
-        {
-            txt_pais.Text = null;
-            txt_cuidad.Text = null;
-        }
-
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_cancelar_Click(object sender, EventArgs e)
         {
-            limpiar();
             Response.Redirect("PageAeropuertos.aspx");
         }
 
+        /// <summary>
+        /// boton el cual ingresa o edita segun lo solicitado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
             if (verificacion(id) == false)
             {
                 actualizarDatos();
-                limpiar();
                 Response.Redirect("PageAeropuertos.aspx");
             }
             else
             {
                 ingresarDatos();
-                limpiar();
                 Response.Redirect("PageAeropuertos.aspx");
             }
         }

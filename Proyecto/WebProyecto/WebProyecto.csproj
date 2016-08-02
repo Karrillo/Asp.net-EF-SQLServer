@@ -74,6 +74,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Css\Estilos.css" />
+    <Content Include="Css\featured_slide.css" />
+    <Content Include="Css\forms.css" />
+    <Content Include="Css\layout.css" />
+    <Content Include="Css\navi.css" />
+    <Content Include="Css\tables.css" />
     <Content Include="PageAerolineas.aspx" />
     <Content Include="PageAerolineas2.aspx" />
     <Content Include="PageAeropuertos.aspx" />
@@ -87,7 +92,16 @@
     <Content Include="PageTicketes.aspx" />
     <Content Include="PageVuelos.aspx" />
     <Content Include="PageVuelos2.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Css\jquery.datetimepicker.css" />
+    <Content Include="Scripts\jquery.datetimepicker.full.js" />
+    <Content Include="Scripts\jquery.datetimepicker.full.min.js" />
+    <Content Include="Scripts\jquery.datetimepicker.js" />
+    <Content Include="Css\jquery.datetimepicker.min.css" />
+    <Content Include="Scripts\jquery.datetimepicker.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="zaza.jpg" />
   </ItemGroup>
   <ItemGroup>

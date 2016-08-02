@@ -12,28 +12,50 @@ namespace WebProyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
+        /// <summary>
+        /// boton para ingresar nueva informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
             Session["Data"] = 0;
             Response.Redirect("PageAeropuertos2.aspx");
         }
 
-        protected void lbPuertas_Click(object sender, EventArgs e) {
+        /// <summary>
+        /// linkbuton para ingresar una puerta de abordaje a un aeropuerto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void lbPuertas_Click(object sender, EventArgs e)
+        {
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;
             Session["Data"] = (GridView1.DataKeys[row.RowIndex].Value);
             Response.Redirect("PagePuertas.aspx");
         }
 
-        protected void lbEditar_Click(object sender, EventArgs e) {
+        /// <summary>
+        /// linkbuton para editar informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void lbEditar_Click(object sender, EventArgs e)
+        {
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;
             Session["Data"] = (GridView1.DataKeys[row.RowIndex].Value);
             Response.Redirect("PageAeropuertos2.aspx");
         }
 
-        protected void lbEliminar_Click(object sender, EventArgs e) {
+        /// <summary>
+        /// linkbuton para desahabiliar un aeropuerto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void lbEliminar_Click(object sender, EventArgs e)
+        {
 
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;
             int id = Convert.ToInt32(GridView1.DataKeys[row.RowIndex].Value);

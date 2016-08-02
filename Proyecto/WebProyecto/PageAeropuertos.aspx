@@ -4,7 +4,7 @@
     <form id="form1" runat="server">
         <table style="width: 100%; border: 1px solid #cccccc">
             <tr>
-                <td>
+                <td><%--Gridview--%>
                     <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSourceAeropuerto" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical" AutoGenerateColumns="False" DataKeyNames="idaeropuerto">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
@@ -37,11 +37,12 @@
                         <SortedDescendingCellStyle BackColor="#EAEAD3" />
                         <SortedDescendingHeaderStyle BackColor="#575357" />
                     </asp:GridView>
+                    <%--sqlDataSource--%>
                     <asp:SqlDataSource ID="SqlDataSourceAeropuerto" runat="server" ConnectionString="<%$ ConnectionStrings:PROYECTOConnectionString %>" SelectCommand="SELECT idaeropuerto, Cuidad, Pais FROM Aeropuertos WHERE Estado = 1"></asp:SqlDataSource>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td><%--Boton--%>
                     <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar" CssClass="Button" OnClick="btn_ingresar_Click" />
                 </td>
             </tr>

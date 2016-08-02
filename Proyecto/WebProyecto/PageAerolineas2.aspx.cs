@@ -29,10 +29,10 @@ namespace WebProyecto
                 if (verificacion(id) == false)
                 {
                     cargarDatos();
-                } 
+                }
             }
         }
-   
+
 
         /// <summary>
         /// carga datos en el formulario
@@ -71,7 +71,7 @@ namespace WebProyecto
                 }
                 try
                 {
-                    
+
                     context.SaveChanges();
                 }
                 catch (Exception e)
@@ -100,9 +100,9 @@ namespace WebProyecto
                 }
                 catch (Exception e)
                 {
-                 Response.Write("<script language=javascript> alert('"+e.Message+"'); </script>");
+                    Response.Write("<script language=javascript> alert('" + e.Message + "'); </script>");
                 }
-                
+
             }
         }
 
@@ -124,22 +124,12 @@ namespace WebProyecto
         }
 
         /// <summary>
-        /// limpia los componentes
-        /// </summary>
-        private void limpiar() {
-            txt_codigo.Text = null;
-            txt_nombre.Text = null;
-            txt_descrip.Text = null;
-        }
-
-        /// <summary>
         /// redireccion a la pagina anterior
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         protected void btn_cancelar_Click(object sender, EventArgs e)
         {
-            limpiar();
             Response.Redirect("PageAerolineas.aspx");
         }
 
@@ -153,13 +143,11 @@ namespace WebProyecto
             if (verificacion(id) == false)
             {
                 actualizarDatos();
-                limpiar();
                 Response.Redirect("PageAerolineas.aspx");
             }
             else
             {
                 ingresarDatos();
-                limpiar();
                 Response.Redirect("PageAerolineas.aspx");
             }
         }

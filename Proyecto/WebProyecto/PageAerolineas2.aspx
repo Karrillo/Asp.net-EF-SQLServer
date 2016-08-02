@@ -4,11 +4,12 @@
     <form id="form1" runat="server">
         <table style="width: 100%; border: 1px solid #cccccc">
             <tr>
-                <td colspan="2">
+                <td colspan="2"><%--Titulos--%>
                     <h1>Aerolineas</h1>
                 </td>
             </tr>
             <tr>
+                <%--formulario--%>
                 <td style="width: 235px">Codigo</td>
                 <td>
                     <asp:TextBox ID="txt_codigo" runat="server" MaxLength="50" Width="184px" CssClass="twitterStyleTextbox"></asp:TextBox>
@@ -33,8 +34,8 @@
                     <asp:Label ID="lb_mensaje" runat="server"></asp:Label>
                     <br />
                 </td>
-                <td>
-                    <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar" CssClass="Button" OnClick="btn_ingresar_Click"/>
+                <td><%--botones--%>
+                    <asp:Button ID="btn_ingresar" runat="server" Text="Ingresar" CssClass="Button" OnClick="btn_ingresar_Click" />
                     <asp:Button ID="btn_cancelar" runat="server" Text="Cancelar" CssClass="Button" OnClick="btn_cancelar_Click" />
                 </td>
             </tr>

@@ -12,21 +12,36 @@ namespace WebProyecto
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
+        /// <summary>
+        /// redirecciona al formulario para nuevo ingreso de informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
             Session["Data2"] = 0;
             Response.Redirect("PagePuertas2.aspx");
         }
 
+        /// <summary>
+        /// redirecciona al formulario para editar informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void lbEditar_Click(object sender, EventArgs e)
         {
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;
             Session["Data2"] = (GridView1.DataKeys[row.RowIndex].Value);
             Response.Redirect("PagePuertas2.aspx");
         }
+
+        /// <summary>
+        /// linkbuton para desahabiliar una puerta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void lbEliminar_Click(object sender, EventArgs e)
         {
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;

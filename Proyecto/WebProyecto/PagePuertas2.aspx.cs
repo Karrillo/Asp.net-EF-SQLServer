@@ -10,9 +10,14 @@ namespace WebProyecto
 {
     public partial class PagePuertas2 : System.Web.UI.Page
     {
-        private Int32 id;
-        private Int32 id2;
+        private Int32 id;//id de aeropuertos
+        private Int32 id2;//id de puertas
 
+        /// <summary>
+        /// verifica si es nuevo ingreso o editar para cargar los datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Convert.ToInt32(Session["Data"]);
@@ -48,7 +53,7 @@ namespace WebProyecto
         }
 
         /// <summary>
-        /// actualiza datos
+        /// actualiza informacion
         /// </summary>
         private void actualizarDatos()
         {
@@ -97,7 +102,6 @@ namespace WebProyecto
                 {
                     Response.Write("<script language=javascript> alert('" + e.Message + "'); </script>");
                 }
-
             }
         }
 
@@ -119,34 +123,31 @@ namespace WebProyecto
         }
 
         /// <summary>
-        /// limpia los componentes
+        /// ingresa un nuevo dato o edita la informacion
         /// </summary>
-        private void limpiar()
-        {
-            //txt_codigo.Text = null;
-            //txt_terminal.Text = null;
-            //NumeroDePuerta.Text = null;
-        }
-
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
             if (verificacion(id2) == false)
             {
                 actualizarDatos();
-                limpiar();
                 Response.Redirect("PagePuertas.aspx");
             }
             else
             {
                 ingresarDatos();
-                limpiar();
                 Response.Redirect("PagePuertas.aspx");
             }
         }
 
+        /// <summary>
+        /// redirecciona a la pagina anterior
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btn_cancelar_Click(object sender, EventArgs e)
         {
-            limpiar();
             Response.Redirect("PagePuertas.aspx");
         }
     }
