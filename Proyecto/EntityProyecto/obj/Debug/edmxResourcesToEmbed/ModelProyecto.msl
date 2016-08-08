@@ -133,5 +133,30 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ProyectoModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AsientosMin" FunctionName="ProyectoModel.Store.AsientosMin" />
+    <FunctionImportMapping FunctionImportName="AsientosMax" FunctionName="ProyectoModel.Store.AsientosMax" />
+    <FunctionImportMapping FunctionImportName="OrdenesAsientos" FunctionName="ProyectoModel.Store.OrdenesAsientos" />
+    <FunctionImportMapping FunctionImportName="AsientosDisponibles" FunctionName="ProyectoModel.Store.AsientosDisponibles" />
+    <FunctionImportMapping FunctionImportName="CargarVuelo" FunctionName="ProyectoModel.Store.CargarVuelo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProyectoModel.CargarVuelo_Result">
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="Cuidad" ColumnName="Cuidad" />
+          <ScalarProperty Name="Terminal" ColumnName="Terminal" />
+          <ScalarProperty Name="NumeroDePuerta" ColumnName="NumeroDePuerta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

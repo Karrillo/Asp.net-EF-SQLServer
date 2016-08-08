@@ -25,6 +25,7 @@
         <AssociationConnector Association="ProyectoModel.FK__AsientosD__IDVue__21B6055D" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoModel.FK__Itinerari__IDVue__24927208" ManuallyRouted="false" />
         <AssociationConnector Association="ProyectoModel.FK__Vuelos__IDPuerta__1ED998B2" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ProyectoModel.sysdiagrams" Width="1.5" PointX="3.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

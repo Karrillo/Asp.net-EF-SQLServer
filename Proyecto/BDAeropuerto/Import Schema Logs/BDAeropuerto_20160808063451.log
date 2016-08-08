@@ -1,0 +1,77 @@
+08/08/2016 12:34:51	This log contains information about the import schema operation into project 'BDAeropuerto' on computer 'FREAK' by user 'Carrillo'.
+08/08/2016 12:34:51	Import of database schema has started.
+08/08/2016 12:34:56	Gathering database options
+08/08/2016 12:34:56	Gathering users
+08/08/2016 12:34:56	Gathering roles
+08/08/2016 12:34:56	Gathering application roles
+08/08/2016 12:34:56	Gathering role memberships
+08/08/2016 12:34:56	Gathering filegroups
+08/08/2016 12:34:56	Gathering full-text catalogs
+08/08/2016 12:34:56	Gathering assemblies
+08/08/2016 12:34:56	Gathering certificates
+08/08/2016 12:34:56	Gathering asymmetric keys
+08/08/2016 12:34:56	Gathering symmetric keys
+08/08/2016 12:34:56	Gathering encrypted symmetric keys
+08/08/2016 12:34:56	Gathering schemas
+08/08/2016 12:34:56	Gathering XML schema collections
+08/08/2016 12:34:56	Gathering user-defined data types
+08/08/2016 12:34:56	Gathering user-defined types
+08/08/2016 12:34:56	Gathering table types
+08/08/2016 12:34:56	Gathering unique keys for table types
+08/08/2016 12:34:56	Gathering primary keys for table types
+08/08/2016 12:34:56	Gathering indexes for table types
+08/08/2016 12:34:56	Gathering check constraints for table types
+08/08/2016 12:34:56	Gathering default constraints for table types
+08/08/2016 12:34:56	Gathering partition functions
+08/08/2016 12:34:56	Gathering partition schemes
+08/08/2016 12:34:56	Gathering functions
+08/08/2016 12:34:56	Gathering encrypted functions
+08/08/2016 12:34:56	Gathering aggregates
+08/08/2016 12:34:56	Gathering procedures
+08/08/2016 12:34:56	Gathering encrypted procedures
+08/08/2016 12:34:56	Gathering tables
+08/08/2016 12:34:56	Gathering primary keys
+08/08/2016 12:34:56	Gathering unique constraints
+08/08/2016 12:34:56	Gathering foreign keys
+08/08/2016 12:34:56	Gathering default constraints
+08/08/2016 12:34:56	Gathering check constraints
+08/08/2016 12:34:56	Gathering views
+08/08/2016 12:34:56	Gathering encrypted views
+08/08/2016 12:34:56	Gathering indexes
+08/08/2016 12:34:56	Gathering statistics
+08/08/2016 12:34:56	Gathering full-text index stoplists
+08/08/2016 12:34:56	Gathering search property lists
+08/08/2016 12:34:56	Gathering search properties
+08/08/2016 12:34:56	Gathering full-text indexes
+08/08/2016 12:34:56	Gathering column store indexes
+08/08/2016 12:34:56	Gathering spatial indexes
+08/08/2016 12:34:56	Gathering XML indexes
+08/08/2016 12:34:56	Gathering Selective XML indexes
+08/08/2016 12:34:56	Gathering encrypted triggers
+08/08/2016 12:34:56	Gathering triggers
+08/08/2016 12:34:56	Gathering encrypted and clr ddl triggers
+08/08/2016 12:34:56	Gathering ddl triggers
+08/08/2016 12:34:56	Gathering synonyms
+08/08/2016 12:34:56	Gathering defaults
+08/08/2016 12:34:56	Gathering data constraint uddt bindings
+08/08/2016 12:34:56	Gathering rules
+08/08/2016 12:34:56	Gathering data constraint uddt bindings
+08/08/2016 12:34:56	Gathering message types
+08/08/2016 12:34:56	Gathering queues
+08/08/2016 12:34:56	Gathering contracts
+08/08/2016 12:34:56	Gathering services
+08/08/2016 12:34:56	Gathering event notifications
+08/08/2016 12:34:56	Gathering remote service bindings
+08/08/2016 12:34:56	Gathering broker priorities
+08/08/2016 12:34:56	Gathering signatures
+08/08/2016 12:34:56	Gathering data compression options
+08/08/2016 12:34:56	Gathering sequence types
+08/08/2016 12:34:56	Gathering extended properties
+08/08/2016 12:34:56	Gathering credentials
+08/08/2016 12:34:56	Gathering logins
+08/08/2016 12:34:56	Gathering server audits
+08/08/2016 12:34:57	Scanning project for duplicate elements
+08/08/2016 12:34:57	Finished duplicate element processing
+08/08/2016 12:34:57	Finished importing database.
+08/08/2016 12:34:57	A summary of the import was saved to the following location: C:\Users\Carrillo\Desktop\Proyecto\BDAeropuerto\Import Schema Logs\BDAeropuerto_20160808063451.log
+08/08/2016 12:34:57	Click Finish to continue...

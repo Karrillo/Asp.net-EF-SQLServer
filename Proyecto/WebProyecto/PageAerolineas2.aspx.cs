@@ -29,6 +29,7 @@ namespace WebProyecto
                 if (verificacion(id) == false)
                 {
                     cargarDatos();
+                    txt_codigo.Enabled = false;
                 }
             }
         }
@@ -65,19 +66,10 @@ namespace WebProyecto
                             select a;
                 foreach (var item in lista)
                 {
-                    item.Codigo = txt_codigo.Text.Trim();
-                    item.Nombre = txt_codigo.Text.Trim();
-                    item.Descripcion = txt_descrip.Text.Trim();
+                    item.Nombre = txt_nombre.Text.Trim();
+                    item.Descripcion = txt_descrip.Text.Trim();    
                 }
-                try
-                {
-
-                    context.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    Response.Write("<script language=javascript> alert('" + e.Message + "'); </script>");
-                }
+                context.SaveChanges();
             }
         }
 
@@ -94,15 +86,7 @@ namespace WebProyecto
                 aerolinea.Descripcion = txt_descrip.Text.Trim();
                 aerolinea.Estado = true;
                 context.Aerolineas.Add(aerolinea);
-                try
-                {
-                    context.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    Response.Write("<script language=javascript> alert('" + e.Message + "'); </script>");
-                }
-
+                context.SaveChanges();
             }
         }
 
@@ -142,13 +126,39 @@ namespace WebProyecto
         {
             if (verificacion(id) == false)
             {
-                actualizarDatos();
-                Response.Redirect("PageAerolineas.aspx");
+                    actualizarDatos();
+                    Response.Redirect("PageAerolineas.aspx");
             }
             else
             {
-                ingresarDatos();
-                Response.Redirect("PageAerolineas.aspx");
+                if (existe(txt_codigo.Text) == false)
+                {
+                    ingresarDatos();
+                    Response.Redirect("PageAerolineas.aspx");
+                }
+                else
+                {
+                    txt_codigo.Text = null;
+                    lb_mensaje.Text = "Error: Codigo ya existe";
+                }
+            }
+        }
+
+        /// <summary>
+        /// verificacion si existe el codigo en la base de datos
+        /// </summary>
+        private Boolean existe(string codigo)
+        {
+            using (ProyectoEntities context = new ProyectoEntities())
+            {
+                var lista = from a in context.Aerolineas
+                            where a.Codigo.Equals(codigo)
+                            select a;
+                foreach (var item in lista)
+                {
+                    return true;
+                }
+                return false;
             }
         }
     }

@@ -61,11 +61,12 @@ namespace WebProyecto
                             select a;
                 foreach (var item in lista)
                 {
-
+                    item.IDVuelo = int.Parse(DropDownList1.SelectedValue);
+                    item.HoraRealDeSalida = DateTime.Parse(txt_salida.Text);
+                    item.HoraRealDeLlegada = DateTime.Parse(txt_llegada.Text);
                 }
                 try
                 {
-
                     context.SaveChanges();
                 }
                 catch (Exception e)

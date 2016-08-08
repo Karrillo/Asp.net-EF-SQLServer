@@ -110,9 +110,9 @@ namespace WebProyecto
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        private bool verificacion(int id)
+        private bool verificacion(int id2)
         {
-            if (id == 0)
+            if (id2 == 0)
             {
                 return true;
             }
@@ -136,8 +136,34 @@ namespace WebProyecto
             }
             else
             {
-                ingresarDatos();
-                Response.Redirect("PagePuertas.aspx");
+                if (existe(txt_codigo.Text) == false)
+                {
+                    ingresarDatos();
+                    Response.Redirect("PagePuertas.aspx");
+                }
+                else
+                {
+                    txt_codigo.Text = null;
+                    lb_mensaje.Text = "Error: Codigo ya existe";
+                }
+            }
+        }
+
+        /// <summary>
+        /// verificacion si existe el codigo en la base de datos
+        /// </summary>
+        private Boolean existe(string codigo)
+        {
+            using (ProyectoEntities context = new ProyectoEntities())
+            {
+                var lista = from a in context.PuertasDeAbordajes
+                            where a.Codigo.Equals(codigo)
+                            select a;
+                foreach (var item in lista)
+                {
+                    return true;
+                }
+                return false;
             }
         }
 

@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td style="width: 235px">
-                    <asp:Label ID="lb_mensaje" runat="server"></asp:Label>
+                    <asp:Label ID="lb_mensaje" runat="server" ForeColor="Red"></asp:Label>
                     <br />
                 </td>
                 <td><%--botones--%>

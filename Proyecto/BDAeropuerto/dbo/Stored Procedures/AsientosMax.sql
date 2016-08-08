@@ -1,0 +1,16 @@
+﻿CREATE PROCEDURE AsientosMax
+ @Id bigint
+AS
+BEGIN
+	SET NOCOUNT ON;
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Business','A',1,@Id),('Business','A',2,@Id),('Business','A',3,@Id),('Business','A',4,@Id),('Business','A',5,@Id),('Business','A',6,@Id),('Business','A',7,@Id),('Business','A',8,@Id),('Business','A',9,@Id),('Business','A',10,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Business','B',11,@Id),('Business','B',12,@Id),('Business','B',13,@Id),('Business','B',14,@Id),('Business','B',15,@Id),('Business','B',16,@Id),('Business','B',17,@Id),('Business','B',18,@Id),('Business','B',19,@Id),('Business','B',20,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Business','C',21,@Id),('Business','C',22,@Id),('Business','C',23,@Id),('Turista','C',24,@Id),('Business','C',25,@Id),('Business','C',26,@Id),('Business','C',27,@Id),('Turista','C',28,@Id),('Business','C',29,@Id),('Business','C',30,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Business','D',31,@Id),('Business','D',32,@Id),('Business','D',33,@Id),('Business','D',34,@Id),('Business','D',35,@Id),('Business','D',36,@Id),('Business','D',37,@Id),('Business','D',38,@Id),('Business','D',39,@Id),('Business','D',40,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Business','E',41,@Id),('Business','E',42,@Id),('Business','E',43,@Id),('Business','E',44,@Id),('Business','E',45,@Id),('Business','E',46,@Id),('Business','E',47,@Id),('Business','E',48,@Id),('Business','E',49,@Id),('Business','E',50,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Turista','F',51,@Id),('Turista','F',52,@Id),('Turista','F',53,@Id),('Turista','F',54,@Id),('Turista','F',55,@Id),('Turista','F',56,@Id),('Turista','F',57,@Id),('Turista','F',58,@Id),('Turista','F',59,@Id),('Turista','F',60,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Turista','G',61,@Id),('Turista','G',62,@Id),('Turista','G',63,@Id),('Turista','G',64,@Id),('Turista','G',65,@Id),('Turista','G',66,@Id),('Turista','G',67,@Id),('Turista','G',68,@Id),('Turista','G',69,@Id),('Turista','G',70,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Turista','J',71,@Id),('Turista','J',72,@Id),('Turista','J',73,@Id),('Turista','J',74,@Id),('Turista','J',75,@Id),('Turista','J',76,@Id),('Turista','J',77,@Id),('Turista','J',78,@Id),('Turista','J',79,@Id),('Turista','J',80,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Turista','K',81,@Id),('Turista','K',82,@Id),('Turista','K',83,@Id),('Turista','K',84,@Id),('Turista','K',85,@Id),('Turista','K',86,@Id),('Turista','K',87,@Id),('Turista','K',88,@Id),('Turista','K',89,@Id),('Turista','K',90,@Id);
+INSERT INTO AsientosDeVuelos([TipoDeAsiento],[Fila],[Numero],[IDVuelo]) VALUES('Turista','L',91,@Id),('Turista','L',92,@Id),('Turista','L',93,@Id),('Turista','L',94,@Id),('Turista','L',95,@Id),('Turista','L',96,@Id),('Turista','L',97,@Id),('Turista','L',98,@Id),('Turista','L',99,@Id),('Turista','L',100,@Id);
+END

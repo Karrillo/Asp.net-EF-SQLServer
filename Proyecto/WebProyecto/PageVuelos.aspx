@@ -35,7 +35,7 @@
                         <SortedDescendingCellStyle BackColor="#EAEAD3" />
                         <SortedDescendingHeaderStyle BackColor="#575357" />
                     </asp:GridView><%--sqldatasource--%>
-                    <asp:SqlDataSource ID="SqlDataSourceVuelos" runat="server" ConnectionString="<%$ ConnectionStrings:PROYECTOConnectionString %>" SelectCommand="SELECT Vuelos.IDVuelo, Vuelos.TipoDeAvion, Vuelos.HoraDeSalida, Vuelos.HoraDeLlegada, Vuelos.Codigo, Aerolineas.IDAerolinea FROM Vuelos INNER JOIN Aerolineas ON Vuelos.IDAerolinea = Aerolineas.IDAerolinea WHERE (Aerolineas.IDAerolinea = @IDAerolinea)">
+                    <asp:SqlDataSource ID="SqlDataSourceVuelos" runat="server" ConnectionString="<%$ ConnectionStrings:PROYECTOConnectionString %>" SelectCommand="SELECT Vuelos.IDVuelo, Vuelos.TipoDeAvion, Vuelos.HoraDeSalida, Vuelos.HoraDeLlegada, Vuelos.Codigo, Aerolineas.IDAerolinea FROM Vuelos INNER JOIN Aerolineas ON Vuelos.IDAerolinea = Aerolineas.IDAerolinea WHERE (Aerolineas.IDAerolinea = @IDAerolinea) AND Vuelos.Estado=1">
                         <SelectParameters>
                             <asp:SessionParameter Name="IDAerolinea" SessionField="Data" />
                         </SelectParameters>

@@ -142,8 +142,35 @@ namespace WebProyecto
             }
             else
             {
-                ingresarDatos();
-                Response.Redirect("PageAeropuertos.aspx");
+                if (existe(txt_cuidad.Text,txt_pais.Text) == false)
+                {
+                    ingresarDatos();
+                    Response.Redirect("PageAeropuertos.aspx");
+                }
+                else
+                {
+                    txt_cuidad.Text = null;
+                    txt_pais.Text = null;
+                    lb_mensaje.Text = "Error: Este Aeropuerto ya existe";
+                }
+            }
+        }
+
+        /// <summary>
+        /// verificacion si existe el codigo en la base de datos
+        /// </summary>
+        private Boolean existe(string cuidad,string pais)
+        {
+            using (ProyectoEntities context = new ProyectoEntities())
+            {
+                var lista = from a in context.Aeropuertos
+                            where a.Cuidad.Equals(cuidad) && a.Pais.Equals(pais)
+                            select a;
+                foreach (var item in lista)
+                {
+                    return true;
+                }
+                return false;
             }
         }
     }

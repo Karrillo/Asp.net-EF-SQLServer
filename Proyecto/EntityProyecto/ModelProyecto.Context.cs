@@ -12,6 +12,8 @@ namespace EntityProyecto
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ProyectoEntities : DbContext
     {
@@ -36,5 +38,99 @@ namespace EntityProyecto
         public virtual DbSet<PuertasDeAbordajes> PuertasDeAbordajes { get; set; }
         public virtual DbSet<Vuelos> Vuelos { get; set; }
         public virtual DbSet<VAerolineas> VAerolineas { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+    
+        public virtual int AsientosMin(Nullable<long> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(long));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AsientosMin", idParameter);
+        }
+    
+        public virtual int AsientosMax(Nullable<long> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(long));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AsientosMax", idParameter);
+        }
+    
+        public virtual int OrdenesAsientos(Nullable<System.DateTime> fechaPago, string numeroTarjeta, string nombre, string primerApellido, string segundoApellido, Nullable<decimal> total, Nullable<short> numero, string tipoDeAsiento, Nullable<decimal> precio, string fila, Nullable<long> iDItinerario, Nullable<long> iDPasajero)
+        {
+            var fechaPagoParameter = fechaPago.HasValue ?
+                new ObjectParameter("FechaPago", fechaPago) :
+                new ObjectParameter("FechaPago", typeof(System.DateTime));
+    
+            var numeroTarjetaParameter = numeroTarjeta != null ?
+                new ObjectParameter("NumeroTarjeta", numeroTarjeta) :
+                new ObjectParameter("NumeroTarjeta", typeof(string));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("Nombre", nombre) :
+                new ObjectParameter("Nombre", typeof(string));
+    
+            var primerApellidoParameter = primerApellido != null ?
+                new ObjectParameter("PrimerApellido", primerApellido) :
+                new ObjectParameter("PrimerApellido", typeof(string));
+    
+            var segundoApellidoParameter = segundoApellido != null ?
+                new ObjectParameter("SegundoApellido", segundoApellido) :
+                new ObjectParameter("SegundoApellido", typeof(string));
+    
+            var totalParameter = total.HasValue ?
+                new ObjectParameter("Total", total) :
+                new ObjectParameter("Total", typeof(decimal));
+    
+            var numeroParameter = numero.HasValue ?
+                new ObjectParameter("Numero", numero) :
+                new ObjectParameter("Numero", typeof(short));
+    
+            var tipoDeAsientoParameter = tipoDeAsiento != null ?
+                new ObjectParameter("TipoDeAsiento", tipoDeAsiento) :
+                new ObjectParameter("TipoDeAsiento", typeof(string));
+    
+            var precioParameter = precio.HasValue ?
+                new ObjectParameter("Precio", precio) :
+                new ObjectParameter("Precio", typeof(decimal));
+    
+            var filaParameter = fila != null ?
+                new ObjectParameter("Fila", fila) :
+                new ObjectParameter("Fila", typeof(string));
+    
+            var iDItinerarioParameter = iDItinerario.HasValue ?
+                new ObjectParameter("IDItinerario", iDItinerario) :
+                new ObjectParameter("IDItinerario", typeof(long));
+    
+            var iDPasajeroParameter = iDPasajero.HasValue ?
+                new ObjectParameter("IDPasajero", iDPasajero) :
+                new ObjectParameter("IDPasajero", typeof(long));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("OrdenesAsientos", fechaPagoParameter, numeroTarjetaParameter, nombreParameter, primerApellidoParameter, segundoApellidoParameter, totalParameter, numeroParameter, tipoDeAsientoParameter, precioParameter, filaParameter, iDItinerarioParameter, iDPasajeroParameter);
+        }
+    
+        public virtual int AsientosDisponibles(string fecha, Nullable<long> iDVuelos)
+        {
+            var fechaParameter = fecha != null ?
+                new ObjectParameter("Fecha", fecha) :
+                new ObjectParameter("Fecha", typeof(string));
+    
+            var iDVuelosParameter = iDVuelos.HasValue ?
+                new ObjectParameter("IDVuelos", iDVuelos) :
+                new ObjectParameter("IDVuelos", typeof(long));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("AsientosDisponibles", fechaParameter, iDVuelosParameter);
+        }
+    
+        public virtual ObjectResult<CargarVuelo_Result> CargarVuelo(Nullable<long> idItinerario)
+        {
+            var idItinerarioParameter = idItinerario.HasValue ?
+                new ObjectParameter("IdItinerario", idItinerario) :
+                new ObjectParameter("IdItinerario", typeof(long));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<CargarVuelo_Result>("CargarVuelo", idItinerarioParameter);
+        }
     }
 }

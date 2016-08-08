@@ -4,7 +4,7 @@
 
     <form id="form1" runat="server">
         <%--Gridview--%>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSourceHistorial" ForeColor="Black" GridLines="Vertical">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSourceHistorial" ForeColor="Black" GridLines="Vertical" AllowPaging="True">
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:TemplateField HeaderText="Nombre" SortExpression="Nombre">

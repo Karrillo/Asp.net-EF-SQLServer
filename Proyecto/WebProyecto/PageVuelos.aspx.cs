@@ -13,6 +13,7 @@ namespace WebProyecto
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            
         }
 
         /// <summary>
@@ -22,7 +23,7 @@ namespace WebProyecto
         /// <param name="e"></param>
         protected void btn_ingresar_Click(object sender, EventArgs e)
         {
-            Session["Data"] = 0;
+            Session["Data2"] = 0;
             Response.Redirect("PageVuelos2.aspx");
         }
 
@@ -34,7 +35,7 @@ namespace WebProyecto
         protected void lbEditar_Click(object sender, EventArgs e)
         {
             GridViewRow row = (GridViewRow)((LinkButton)sender).NamingContainer;
-            Session["Data"] = (GridView1.DataKeys[row.RowIndex].Value);
+            Session["Data2"] = (GridView1.DataKeys[row.RowIndex].Value);
             Response.Redirect("PageVuelos2.aspx");
         }
 
