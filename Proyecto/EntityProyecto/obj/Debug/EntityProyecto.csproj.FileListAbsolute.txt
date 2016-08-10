@@ -5,6 +5,5 @@ C:\Users\Carrillo\Desktop\Proyecto\EntityProyecto\bin\Debug\EntityFramework.dll
 C:\Users\Carrillo\Desktop\Proyecto\EntityProyecto\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Carrillo\Desktop\Proyecto\EntityProyecto\bin\Debug\EntityFramework.xml
 C:\Users\Carrillo\Desktop\Proyecto\EntityProyecto\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Carrillo\Desktop\Proyecto\EntityProyecto\obj\Debug\EntityProyecto.csprojResolveAssemblyReference.cache
 C:\Users\Carrillo\Desktop\Proyecto\EntityProyecto\obj\Debug\EntityProyecto.dll
 C:\Users\Carrillo\Desktop\Proyecto\EntityProyecto\obj\Debug\EntityProyecto.pdb
